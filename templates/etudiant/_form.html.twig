@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{{ form_start(form) }}
+{{ form_label(form.nom, 'nom etudiant') }}
+    {{ form_widget(form.nom, {'att':{'class':'form-group has-success'}}) }}
+    {{ form_label(form.instit, 'votre istitut') }}
+    {{ form_widget(form.instit, {'att':{'class':'form-group has-success'}}) }}
+    <button  class="btn btn-success dropdown-toggle">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+{% endblock %}
